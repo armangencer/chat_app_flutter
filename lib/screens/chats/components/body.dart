@@ -4,6 +4,7 @@ import 'package:chat_app_flutter/models/chat_model.dart';
 import 'package:flutter/material.dart';
 
 import 'chat_card.dart';
+import 'messages/message_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -30,7 +31,11 @@ class Body extends StatelessWidget {
           itemCount: chatsData.length,
           itemBuilder: (context, index) => ChatCard(
             chat: chatsData[index],
-            press: () {},
+            press: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MessageScreen(),
+                )),
           ),
         ))
       ],

@@ -11,10 +11,9 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  int selectedIndex = 1;
   @override
   Widget build(BuildContext context) {
-    int selectedIndex = 1;
-
     return Scaffold(
       appBar: buildAppBar(),
       body: const Body(),
@@ -26,36 +25,41 @@ class _ChatScreenState extends State<ChatScreen> {
           color: Colors.white,
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: selectedIndex,
-        onTap: (value) {
-          setState(() {
-            selectedIndex = value;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.messenger,
-              ),
-              label: 'Chats'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.people,
-              ),
-              label: 'People'),
-          BottomNavigationBarItem(
-              icon: Icon(
-                Icons.call,
-              ),
-              label: 'Calls'),
-          BottomNavigationBarItem(
-              icon: CircleAvatar(
-                  backgroundImage: AssetImage('assets/images/user.png'),
-                  radius: 14),
-              label: 'User'),
-        ],
-      ),
+      bottomNavigationBar: buildBottomNavigationBar(),
+    );
+  }
+
+  BottomNavigationBar buildBottomNavigationBar() {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      currentIndex: selectedIndex,
+      onTap: (value) {
+        setState(() {
+          selectedIndex = value;
+        });
+      },
+      items: const [
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.messenger,
+            ),
+            label: 'Chats'),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.people,
+            ),
+            label: 'People'),
+        BottomNavigationBarItem(
+            icon: Icon(
+              Icons.call,
+            ),
+            label: 'Calls'),
+        BottomNavigationBarItem(
+            icon: CircleAvatar(
+                backgroundImage: AssetImage('assets/images/user.png'),
+                radius: 14),
+            label: 'User'),
+      ],
     );
   }
 
