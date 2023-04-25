@@ -1,5 +1,4 @@
 import 'package:chat_app_flutter/constants.dart';
-import 'package:chat_app_flutter/screens/chats/components/body.dart';
 import 'package:chat_app_flutter/screens/chats/components/messages/components/message_body.dart';
 import 'package:flutter/material.dart';
 
@@ -30,9 +29,14 @@ class MessageScreen extends StatelessWidget {
                 'Arman Gençer',
                 style: TextStyle(fontSize: 16),
               ),
-              Text(
-                'Active 1m Ago',
-                style: TextStyle(fontSize: 12),
+              Padding(
+                padding: EdgeInsets.only(
+                    bottom: defaultPadding / 5, top: defaultPadding / 4),
+                child: Text(
+                  'Active 1m Ago',
+                  style: TextStyle(fontSize: 11),
+                  textAlign: TextAlign.start,
+                ),
               ),
             ],
           ),
@@ -41,7 +45,7 @@ class MessageScreen extends StatelessWidget {
       actions: [
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.local_phone),
+          icon: const Icon(Icons.local_phone),
         ),
         IconButton(
           onPressed: () {},
