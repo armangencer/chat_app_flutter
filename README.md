@@ -8,6 +8,7 @@
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://instagram.com/arman.gencer" target="blank"><img align="center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="arman.gencer" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/https://www.linkedin.com/in/arman-gen%c3%a7er-71a058182/" target="blank"><img align="center" src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" alt="https://www.linkedin.com/in/arman-gen%c3%a7er-71a058182/" height="30" width="40" /></a>
 </p>
 
 <img src="https://github.com/armangencer/chat_app_flutter/blob/master/assets/images/preview.jpg" alt="Preview">
